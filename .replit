@@ -17,7 +17,7 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "npx serve onceuponawishtravel.web.appx/home.html -l 5000 --single"
+args = "npx serve onceuponawishtravel.web.appx -l 5000 --single"
 
 [[ports]]
 localPort = 5000
