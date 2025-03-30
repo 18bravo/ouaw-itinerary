@@ -5,7 +5,8 @@ run = "localhost:8080"
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "npx serve -s onceuponawishtravel.web.appx -l 5000"]
+run = ["sh", "-c", "npx serve -s build -l 5000"]
+build = ["sh", "-c", "react-scripts build"]
 
 [workflows]
 runButton = "Run"
@@ -17,7 +18,7 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "npx serve -s onceuponawishtravel.web.appx --listen 0.0.0.0:5000"
+args = "npx serve -s onceuponawishtravel.web.appx -l 5000"
 
 [[ports]]
 localPort = 5000
