@@ -8,6 +8,7 @@ channel = "stable-24_05"
 run = ["sh", "-c", "npx serve -s onceuponawishtravel.web.appx -l 5000"]
 
 [workflows]
+runButton = "Run"
 
 [[workflows.workflow]]
 name = "Run"
@@ -16,4 +17,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "npx serve onceuponawishtravel.web.appx -s -p 5000 --listen 0.0.0.0"
+args = "npx serve onceuponawishtravel.web.appx --single --listen 0.0.0.0:5000 --no-compression false --no-clipboard"
